@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge encriptador de texto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Encriptador</h1>
+    
+    <h2 id="info">Por favor no ingrese letras mayusculas, letras con acentos y caracteres especiales</h2>
+
+    <div id="containerCentral">
+        <div id="container1">
+            <textarea id="texto"></textarea>
+            <div>
+                <button id="btnEncriptador">Encriptar</button>
+                <button id="btnDesncriptador">Desencriptar</button>
+            </div>
+        </div>
+        
+        <div id="container2">
+            <label id="lblTextoEncriptado">No hay ningun mensaje</label>
+            <button id="btnCopiar">Copiar</button>
+        </div>
+    </div>
+
+    <footer>
+        <label id="name">by Konan(Manuel Caicedo)</label>
+    </footer>
+   
+
+    <script>
+	    
+        const button = document.getElementById("btnEncriptador");
+	    button.onclick = encriptar;
+        const button2 = document.getElementById("btnDesncriptador");
+        button2.onclick = desencriptar;
+        const button3 = document.getElementById("btnCopiar");
+        button3.onclick = copiar;
+        function encriptar(){
+            const mensaje = document.getElementById("texto").value;
+            const mensajeEncriptado = mensaje.replace(/e/g, "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g, "ufat");
+            document.getElementById("lblTextoEncriptado").innerText = mensajeEncriptado;
+        }
+
+        function desencriptar(){
+            const mensajeEncriptado = document.getElementById("texto").value;
+            const mensajeDesencriptado = mensajeEncriptado.replace(/enter/g, "e").replace(/imes/g, "i").replace(/ai/g, "a").replace(/ober/g, "o").replace(/ufat/g, "u");
+            document.getElementById("lblTextoEncriptado").innerText = mensajeDesencriptado;
+        }
+
+        function copiar(){
+            const mensajeCopiado = document.getElementById("lblTextoEncriptado").innerText;
+            navigator.clipboard.writeText(mensajeCopiado);
+        }
+
+        
+
+    </script>
+</body>
+</html>

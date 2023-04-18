@@ -1,0 +1,91 @@
+body{
+    background-color: rgb(48, 28, 163);
+    font-family: 'Maven Pro', sans-serif;
+}
+
+h1 {
+    font-family: 'Maven Pro', sans-serif;
+    text-align: center;
+    color: white;
+
+}
+
+#info{
+    
+    text-align: center;
+    font-family: 'Maven Pro', sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+#containerCentral{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+#container1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 100px;
+}
+
+#container2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+#texto{
+    width: 500px;
+    height: 400px;
+    background-color: rgb(28, 76, 163 );
+    border: 0.5px solid rgb(13, 58, 106);
+    font-size: 25px;
+    color: white;
+    border-radius: 10px;
+    resize: none;
+}
+
+button{
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 25px;
+    cursor: pointer;
+    background-color: rgb(28, 76, 163);
+    color: white;
+    border: 0.5px solid rgb(13, 58, 106);
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover{
+    background-color: rgb(13, 58, 106);
+}
+
+#lblTextoEncriptado{
+    font-family: 'Maven Pro', sans-serif;
+    background-color: rgb(28, 76, 163);
+    border: 0.5px solid rgb(13, 58, 106);
+    color: white;
+    font-size: 25px;
+    width: 500px;
+    height: 400px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+#name{
+    font-family: 'Maven Pro', sans-serif;
+    color: white;
+    font-size: 15px;
+    font-style: italic;
+}
+
